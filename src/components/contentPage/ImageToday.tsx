@@ -42,7 +42,7 @@ export const ImageToday = () => {
     <div className='image--today'>
         <Header date={date} />
         {/* <img src={photoDetails.url} alt="" /> */}
-        <img src={dummyPhoto} alt={title} />
+        <img src={url} alt={title} />
         <h2>{title}</h2>
         <div>
             <h2>Image Details:</h2>
