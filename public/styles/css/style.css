@@ -1,0 +1,276 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #F1F1F1;
+}
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #105bd8;
+}
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+@media only screen and (max-width: 800px) {
+  h3 {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+  h3 {
+    font-size: 1.12rem;
+  }
+}
+
+h4 {
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 800px) {
+  h4 {
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+}
+
+p {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+button, .btn--secondary, input[type=submit] {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #105bd8;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+button:hover, .btn--secondary:hover, input[type=submit]:hover {
+  background-color: #F1F1F1;
+  border: 1px solid #105bd8;
+}
+@media only screen and (max-width: 800px) {
+  button, .btn--secondary, input[type=submit] {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.btn--secondary {
+  background-color: #F1F1F1;
+}
+
+.btn--small {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  font-weight: bold;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #212121;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  font-size: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  ul li {
+    font-size: 0.8rem;
+  }
+}
+
+hr {
+  margin: 2rem auto;
+  color: #105bd8;
+  border: 1px solid #105bd8;
+  width: 80%;
+}
+@media only screen and (max-width: 800px) {
+  hr {
+    margin-block: 1rem;
+  }
+}
+
+.Toastify__toast-container {
+  z-index: 9999999;
+}
+
+.loader {
+  width: 100%;
+  margin: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #212121;
+  padding: 1rem;
+  justify-content: space-between;
+}
+nav ul {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  gap: 3rem;
+}
+nav ul li {
+  color: #fff;
+}
+
+.image--today {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: 60%;
+}
+@media only screen and (max-width: 800px) {
+  .image--today {
+    width: 100%;
+  }
+}
+.image--today header {
+  text-align: center;
+}
+.image--today header h1 {
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: #105bd8;
+}
+@media only screen and (max-width: 800px) {
+  .image--today header h1 {
+    font-size: 2rem;
+  }
+}
+.image--today header h2 {
+  font-size: 2rem;
+  color: #212121;
+}
+@media only screen and (max-width: 800px) {
+  .image--today header h2 {
+    font-size: 1.2rem;
+  }
+}
+.image--today img {
+  border-radius: 1rem;
+}
+.image--today p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+@media only screen and (max-width: 800px) {
+  .image--today p {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #D6D7D9;
+  padding-top: 2rem;
+  margin-top: 4.5rem;
+}
+footer .footer--items {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+}
+footer .footer--items .mid {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+footer .footer--items .mid ul {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+footer .footer--items p {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  transition: all 300ms;
+}
+
+html, body {
+  border: none;
+  line-height: 1.3;
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  font-family: "Space Grotesk", "sans-serif";
+}/*# sourceMappingURL=style.css.map */
