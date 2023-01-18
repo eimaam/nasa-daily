@@ -1,0 +1,27 @@
+footer{
+    width: 100%;
+    background-color: $grey;
+    padding-top: $l-pad;
+    margin-top: $xl-margin;
+    
+    .footer--items{
+        @include flex-col;
+        width: 50%;
+        
+        .mid{
+            width: 100%;
+            @include flex-row;
+            justify-content: space-between;
+            padding-block: $m-pad;
+
+            ul{
+                @include flex-row;
+                margin: 0;
+            }
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+}
