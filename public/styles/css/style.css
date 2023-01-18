@@ -236,6 +236,11 @@ footer .footer--items {
   gap: 1rem;
   width: 50%;
 }
+@media only screen and (max-width: 800px) {
+  footer .footer--items {
+    width: 100%;
+  }
+}
 footer .footer--items .mid {
   width: 100%;
   margin: auto;
@@ -246,6 +251,12 @@ footer .footer--items .mid {
   justify-content: space-between;
   padding-block: 1.5rem;
 }
+@media only screen and (max-width: 800px) {
+  footer .footer--items .mid {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 footer .footer--items .mid ul {
   margin: auto;
   display: flex;
@@ -253,6 +264,11 @@ footer .footer--items .mid ul {
   align-items: center;
   gap: 1rem;
   margin: 0;
+}
+@media only screen and (max-width: 800px) {
+  footer .footer--items .mid ul {
+    flex-direction: column;
+  }
 }
 footer .footer--items p {
   text-align: center;
