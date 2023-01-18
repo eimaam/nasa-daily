@@ -1,0 +1,15 @@
+nav{
+    @include flex-row;
+    background-color: $dark;
+    padding: $s-pad;
+    justify-content: space-between;
+
+    ul{
+        @include flex-row;
+        gap: 3rem;
+
+        li{
+            color: $default;
+        }
+    }
+}
