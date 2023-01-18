@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Footer } from '../Footer';
 import { Header } from './Header';
-import dummyPhoto from "../../assets/MacsClusterLens.jpg"
-import { Nav } from '../Nav';
-
 
 interface ImageProps{
     date: string,
