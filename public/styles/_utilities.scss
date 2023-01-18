@@ -1,0 +1,143 @@
+@import './mixins';
+
+// Header sizes
+// font sizes
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 2rem;
+    color: $secondary;
+
+    @include mobile{
+        font-size: 1.35rem;
+    }
+
+    @include tablet{
+        font-size: 1.4rem;
+    }
+}
+
+h2{
+    font-size: 1.25rem;
+    color: $primary;
+
+    @include mobile{
+        font-size: 1.05rem;
+    }
+
+    @include tablet{
+        font-size: 1.2rem;
+    }
+}
+
+h3{
+    font-size: 1.15rem;
+
+    @include mobile{
+        font-size: 0.9rem;
+    }
+
+    @include tablet{
+        font-size: 1.12rem;
+    }
+}
+
+h4{
+    font-size: 1.01rem;
+    font-weight: 500;
+
+    @include mobile{
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+}
+
+p{
+    font-size: 1rem;
+    font-weight: lighter;
+
+    @include mobile{
+        font-size: 0.9rem;
+    }
+}
+
+// Button & submit input
+button, input[type=submit]{
+    padding: $xs-pad $m-pad; 
+    font-size: 1rem;
+    color: $default;
+    text-transform: capitalize;
+    background-color: $primary;
+    border-radius: $m-border-radius;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $secondary;
+        border: 1px solid $primary;
+    }
+
+    @include mobile{
+        padding: $xs-pad;
+        font-size: 0.8rem;
+    }
+}
+
+.btn--secondary{
+    @extend button;
+    background-color: $secondary;
+}
+
+.btn--small{
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    font-weight: bold;
+}
+
+.btn--white{
+    background-color: $default;
+    color: $dark;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover; 
+}
+
+ul{
+    list-style-type: none;
+
+    li{
+        font-size: 1rem;
+
+        @include mobile{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+hr{
+    margin: 2rem auto;
+    color: $primary;
+    border: 1px solid $primary;
+    width: 80%;
+
+    @include mobile{
+        margin-block: 1rem;
+    }
+}
+// toastify container
+.Toastify__toast-container {
+    z-index: 9999999;
+}
+// loading animations
+.loader{
+    width: 100%;
+    margin: auto;
+    @include flex-row;
+}
+// container default

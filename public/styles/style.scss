@@ -1,0 +1,18 @@
+// reset all content
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    transition: all 300ms
+}
+
+html, body{
+    border: none;
+    line-height: 1.3;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    background-color: $bgColor;
+    font-family: $spaceGrotesk;
+}
