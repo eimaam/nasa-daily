@@ -41,13 +41,18 @@ export const ImageToday = () => {
     <>
     <div className='image--today'>
         <Header date={date} />
-        <img src={url} alt={title} />
-        <h2>{title}</h2>
+        <div>
+            <img src={url} alt={title} />
+        </div>
+            <h2>{title}</h2>
+            <h4>Image Credit: <i>NASA</i></h4>
         <hr />
         <div>
             <h2>Image Details:</h2>
             <p>{explanation}</p>
         </div>
+        <h4>Credit: <i>NASA</i></h4>
+
         <hr />
     </div>
     <Footer />
