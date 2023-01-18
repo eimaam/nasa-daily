@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ImageToday } from './components/ImageToday';
+
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <ImageToday />
+    </>
   );
 }
 
