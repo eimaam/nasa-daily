@@ -5,7 +5,7 @@ import { useUser } from '../context/UserContext'
 import { toast } from 'react-hot-toast'
 
 export const Nav = () => {
-  const { user, navigate } = useUser()
+  const { user, navigate, } = useUser()
 
   // function to hide or show nav bar on mobile
   const toggleNav = () => {
