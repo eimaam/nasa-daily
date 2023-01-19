@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 type defaults = {
     user: any,
     setUser: any,
+    navigate:any,
 }
 
 const UserContext = createContext<defaults>({} as defaults);
@@ -19,6 +20,9 @@ type Props = {
     children:React.ReactNode
 }
 export const UserProvider = ( { children } : Props ) => {
+    const navigate = useNavigate()
+
+    
     const [user, setUser] = useState<any>(null)
 
 
@@ -45,6 +49,7 @@ export const UserProvider = ( { children } : Props ) => {
     const value = {
         user,
         setUser,
+        navigate,
     }
 
   return (
