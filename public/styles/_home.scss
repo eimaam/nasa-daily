@@ -31,6 +31,7 @@ header{
         @include mobile{
             @include flex-col;
             text-align: center;
+            gap: 2rem;
         }
 
         img{
@@ -39,7 +40,7 @@ header{
             margin: auto;
 
             @include mobile{
-                width: 70%;
+                width: 85%;
             }
         }
 

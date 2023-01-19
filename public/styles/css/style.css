@@ -402,6 +402,7 @@ header .details {
     align-items: center;
     gap: 1rem;
     text-align: center;
+    gap: 2rem;
   }
 }
 header .details img {
@@ -411,7 +412,7 @@ header .details img {
 }
 @media only screen and (max-width: 800px) {
   header .details img {
-    width: 70%;
+    width: 85%;
   }
 }
 header .details h1 {
