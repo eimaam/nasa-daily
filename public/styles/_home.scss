@@ -1,0 +1,71 @@
+#home{
+    @include flex-col;
+    height: 100vh;
+    margin: auto;
+}
+
+header{
+    @include flex-col;
+    padding: $m-pad;
+    width: 70%;
+    margin: auto;
+    height: 85%;
+    background-color: $grey;
+    border-radius: $m-border-radius;
+    justify-content: space-around;
+
+    @include mobile{
+        width: 90%;
+    }
+
+    @include tablet{
+        width: 85%;
+    }
+
+    .details{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile{
+            @include flex-col;
+            text-align: center;
+        }
+
+        img{
+            width: 80%;
+            height: auto;
+            margin: auto;
+
+            @include mobile{
+                width: 70%;
+            }
+        }
+
+        h1{
+            font-size: 3.5rem;
+            color: $primary;
+
+            @include mobile{
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+    
+    button{
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include mobile{
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        @include tablet{
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+    }
+}
