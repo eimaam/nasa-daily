@@ -10,7 +10,6 @@ interface ImageProps{
 }
 
 export const ImageToday = () => {
-   console.log(localStorage)
 
     const [photoDetails, setPhotoDetails] = useState<ImageProps>({
         date: "",
