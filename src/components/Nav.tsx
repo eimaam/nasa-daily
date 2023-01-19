@@ -43,9 +43,11 @@ export const Nav = () => {
           <button type='button'>logOut</button>
         </li>
       </ul>
+      {user &&
       <div id='logOut' onClick={logOut}>
         <button>logOut</button>
       </div>
+      }
       <div id="toggler" onClick={toggleNav}>
         <h1><GoThreeBars /></h1>
       </div>
