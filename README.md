@@ -4,7 +4,7 @@
   <img src="https://github.com/eimaam/nasa-daily/blob/main/src/assets/Screenshot%20(180).png" alt="logo" width="350"  height="auto" />
   <br/>
 
-  <h3><b>getNOTES | Student Social e-Library</b></h3>
+  <h3><b>NASA-Daily | Daily Images of Space</b></h3>
 
 </div>
 
@@ -31,7 +31,7 @@
 
 # 📖 NASA-Daily <a name="about-project"></a>
 
-**getNOTES** is a Fullstack WebApp that allows logged Users view new fascinating images of space on a daily basis with amazing details/information about the images written by Professional Astronomers 
+**NASA-Daily** is a Fullstack WebApp that allows logged Users view new fascinating images of space on a daily basis with amazing details/information about the images written by Professional Astronomers 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -77,7 +77,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://getnotes.xyz)
+- [Live Demo Link](https://nasa-daily.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +100,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/https://github.com/eimaam/get-notes.git
+  git clone git@github.com:myaccount/https://github.com/eimaam/nasa-daily.git
 ```
 Clone the Backend Repo from https://github.com/eimaam/nasa-daily-backend/
 
