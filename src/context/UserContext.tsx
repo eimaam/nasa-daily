@@ -1,18 +1,19 @@
-import React, { useState, useContext, createContext, useEffect } from 'react'
+import React, { useState, useContext, createContext, useEffect, SetStateAction } from 'react'
 import { useNavigate } from "react-router-dom" 
 
 
-type defaults = {
+type contextType = {
     user: any,
     setUser: any,
     navigate:any,
-    
+    loading: boolean,
+    setLoading: React.Dispatch<SetStateAction<boolean>>;   
 }
 
-const UserContext = createContext<defaults>({} as defaults );
+export const UserContext = createContext<contextType>({} as contextType);
 
 
-
+// creating context
 export const useUser = () => {
     return useContext(UserContext)
 }
@@ -20,19 +21,22 @@ export const useUser = () => {
 type Props = {
     children:React.ReactNode
 }
+
 export const UserProvider = ( { children } : Props ) => {
     const navigate = useNavigate()
 
     
-    const [user, setUser] = useState<any>(null)
-    const [loading, setLoading] = useState<boolean>(false)
+    const [user, setUser] = useState<{} | null>(null)
+    
+    const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
+        // fetch user data from storage if logged in
         const fetchUserData = async () => {
             setLoading(true)
             const username = localStorage.getItem("username")
-            const pass = localStorage.getItem("username")
+            const pass = localStorage.getItem("password")
             if(username != null){
                 setUser({
                     username: username,
