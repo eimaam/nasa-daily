@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { GoThreeBars } from "react-icons/go"
 import { useUser } from '../context/UserContext'
+import { toast } from 'react-hot-toast'
 
 export const Nav = () => {
-  const { user } = useUser()
+  const { user, navigate } = useUser()
 
   // function to hide or show nav bar on mobile
   const toggleNav = () => {
@@ -17,7 +18,13 @@ export const Nav = () => {
     }
   }
 
-  
+  // logOut function
+  const logOut = () => {
+    localStorage.removeItem("username")
+    localStorage.removeItem("password")
+    navigate('/login')
+    toast('Logged Out...')
+  }
 
 
 
@@ -32,11 +39,11 @@ export const Nav = () => {
         <li><Link to="/photooftheday">TODAY</Link></li>
         <li><Link to="">About</Link></li>
         <li><a href="https://www.github.com/eimaam/nasa-daily">Source Code</a></li>
-        <li id='logOutMobile'>
+        <li id='logOutMobile' onClick={logOut}>
           <button type='button'>logOut</button>
         </li>
       </ul>
-      <div id='logOut'>
+      <div id='logOut' onClick={logOut}>
         <button>logOut</button>
       </div>
       <div id="toggler" onClick={toggleNav}>
