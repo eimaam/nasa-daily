@@ -1,7 +1,13 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useUser } from '../context/UserContext'
+import { Loader } from '../utilities/Loader'
+
+
 
 export const SignUp = () => {
+    const {loading, setLoading} = useUser()
 
     const [data, setData] = useState({
         email: "",
@@ -22,10 +28,25 @@ export const SignUp = () => {
         }))
     }
 
+    const signup = async (e:any) => {
+        e.preventDefault()
+        setLoading(true)
+        try {
+            await axios.post("http://localhost:5000/api/v1/user/signup", {username, email, password})
+            alert('ok')
+        } catch (error:any) {
+            console.log(error.message)
+        }
+        setLoading(false)
+    }
+
+    if(loading){
+        return <Loader />
+    }
 
   return (
     <div className='container' id='signup' data-aos="fade-up">
-        <form>
+        <form onSubmit={signup}>
             <h2>SIGN UP</h2>
             <h4>Welcome 👋</h4>
             <>
@@ -61,7 +82,7 @@ export const SignUp = () => {
             </div>
             </>
             <div>
-                <input type='submit' value="Sign up"/>
+                <input type='submit' value="Sign up" />
             </div>
             <div>
                 <p>Have an account already? 

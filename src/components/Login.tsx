@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useUser } from '../context/UserContext'
+import { toast } from 'react-hot-toast'
+import { Loader } from '../utilities/Loader'
+
+
 
 
 
 
 export const Login = () => {
+    const navigate = useNavigate()
+
+    const { user, setUser, setLoading, loading } = useUser()
    
 
     const [data, setData] = useState({
-        email: "",
+        username: "",
         password: ""
     })
+
+    const { username, password } = data;
 
     // handle change
     const handleChange = (e:any) => {
@@ -22,19 +33,47 @@ export const Login = () => {
         }))
     }
 
+
+    //login function
+    const login = async (e:any) => {
+        e.preventDefault()
+        setLoading(true)
+        try {
+            await axios.post("http://localhost:5000/api/v1/user/signin", { username, password })
+            setUser({
+                username: username,
+            })
+            localStorage.setItem("username", username)
+            localStorage.setItem("password", password)
+            toast.success('Welcome')
+            navigate('/photooftheday')
+        }
+        catch (error:any){
+            toast.error('Network Err or Incorrect Details... Retry')
+        }
+        setLoading(false)
+    }
+
+
+    // show loading screen if loading === true
+    if(loading){
+        return <Loader />
+    }
+  
+
     
     
   return (
     <div className='container' id='login' data-aos="fade-up">
-        <form>
+        <form onSubmit={login}>
             <h2>👋 L O G I N</h2>
             <h3>  Enter login credentials: </h3>
             <div>
                 <input 
-                type="email" 
-                name="email"
-                value={data.email}
-                placeholder='Email Address'
+                type="text" 
+                name="username"
+                value={data.username}
+                placeholder='Username'
                 onChange={handleChange}
                 required
                 />
