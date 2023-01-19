@@ -1,0 +1,7 @@
+#login{
+    @extend #signup;
+    
+    form{
+        padding-block: 3rem;
+    }
+}

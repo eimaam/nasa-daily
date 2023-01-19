@@ -313,6 +313,43 @@ footer .footer--items p {
   text-align: center;
 }
 
+#signup, #login, .container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+}
+#signup form, #login form, .container form {
+  background-color: #fff;
+}
+@media only screen and (max-width: 800px) {
+  #signup form, #login form, .container form {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+  #signup form, #login form, .container form {
+    width: 60%;
+  }
+}
+#signup form i, #login form i, .container form i {
+  width: 90%;
+  margin: auto;
+}
+#signup form div, #login form div, .container form div {
+  width: 100%;
+}
+#signup form div input:hover, #login form div input:hover, .container form div input:hover {
+  border: 1px solid #212121;
+}
+
+#login form {
+  padding-block: 3rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -328,4 +365,68 @@ html, body {
   height: 100%;
   text-align: justify;
   font-family: "Space Grotesk", "sans-serif";
+}
+
+form {
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  form {
+    width: 100%;
+  }
+}
+
+input,
+textarea {
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid #105bd8;
+  border-radius: 0.3rem;
+  color: #212121;
+  background-color: #D6D7D9;
+  caret-color: #F1F1F1;
+  resize: none;
+}
+input:hover,
+textarea:hover {
+  border: 1px solid #105bd8;
+}
+@media only screen and (max-width: 800px) {
+  input,
+textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    font-size: 14px;
+  }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  input::placeholder,
+textarea::placeholder {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  input[type=submit] {
+    font-weight: 100;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+  }
 }/*# sourceMappingURL=style.css.map */
