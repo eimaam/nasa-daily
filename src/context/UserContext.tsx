@@ -6,9 +6,10 @@ type defaults = {
     user: any,
     setUser: any,
     navigate:any,
+    
 }
 
-const UserContext = createContext<defaults>({} as defaults);
+const UserContext = createContext<defaults>({} as defaults );
 
 
 
@@ -24,10 +25,12 @@ export const UserProvider = ( { children } : Props ) => {
 
     
     const [user, setUser] = useState<any>(null)
+    const [loading, setLoading] = useState<boolean>(false)
 
 
     useEffect(() => {
         const fetchUserData = async () => {
+            setLoading(true)
             const username = localStorage.getItem("username")
             const pass = localStorage.getItem("username")
             if(username != null){
@@ -35,9 +38,8 @@ export const UserProvider = ( { children } : Props ) => {
                     username: username,
                     password: pass,
                 })
+                setLoading(false)
             }
-            console.log(user)
-
         }
 
         fetchUserData()
@@ -50,6 +52,8 @@ export const UserProvider = ( { children } : Props ) => {
         user,
         setUser,
         navigate,
+        loading,
+        setLoading,
     }
 
   return (
