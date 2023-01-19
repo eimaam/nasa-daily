@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { GoThreeBars } from "react-icons/go"
+import { useUser } from '../context/UserContext'
 
 export const Nav = () => {
+  const { user } = useUser()
+
+  // function to hide or show nav bar on mobile
   const toggleNav = () => {
     const navItems = document.getElementById('navItems') as any;
 
@@ -11,13 +15,16 @@ export const Nav = () => {
     }else{
       navItems.style.display = "none"
     }
-
   }
+
+  
+
+
 
   return (
     <nav>
       <div>
-        <h2>@eimaam</h2>
+        {user ? <h2>{user.username}</h2> : <h2>NASA Daily</h2>}
       </div>
       <ul id='navItems'>
         <li><Link to="/">Home</Link></li>
