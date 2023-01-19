@@ -1,6 +1,7 @@
 import React from 'react'
 import nasaLogo from "../assets/NASA.jpg";
 import { Footer } from './Footer';
+import { Link } from "react-router-dom"
 
 export const Home = () => {
   return (
@@ -20,7 +21,9 @@ export const Home = () => {
       <br />
       <h1>
         <button>
+          <Link to="photooftheday">
           EXPLORE
+          </Link>
         </button>
       </h1>
     </header>
