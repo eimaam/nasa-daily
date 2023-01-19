@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import { useUser } from '../context/UserContext'
 import { Loader } from '../utilities/Loader'
@@ -7,7 +8,12 @@ import { Loader } from '../utilities/Loader'
 
 
 export const SignUp = () => {
-    const {loading, setLoading} = useUser()
+    const { user, loading, setLoading, navigate } = useUser()
+
+
+    useEffect(() => {
+        user && navigate('login')
+    }, [])
 
     const [data, setData] = useState({
         email: "",
@@ -33,7 +39,13 @@ export const SignUp = () => {
         setLoading(true)
         try {
             await axios.post("http://localhost:5000/api/v1/user/signup", {username, email, password})
-            alert('ok')
+            toast.success('Sign up successfully...')
+            toast.success('Proceed to Login')
+            setData({
+                email: "",
+                password: "",
+                username: "",
+            })
         } catch (error:any) {
             console.log(error.message)
         }
