@@ -27,7 +27,7 @@ export const UserProvider = ( { children } : Props ) => {
 
     
     const [user, setUser] = useState<{} | null>(null)
-    
+
     const [loading, setLoading] = useState(false)
 
 
@@ -42,8 +42,8 @@ export const UserProvider = ( { children } : Props ) => {
                     username: username,
                     password: pass,
                 })
-                setLoading(false)
             }
+            setLoading(false)
         }
 
         fetchUserData()
