@@ -1,0 +1,49 @@
+.imageToday {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: 60%;
+}
+@media only screen and (max-width: 800px) {
+  .imageToday {
+    width: 100%;
+  }
+}
+.imageToday header {
+  text-align: center;
+}
+.imageToday header h1 {
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: #105bd8;
+}
+@media only screen and (max-width: 800px) {
+  .imageToday header h1 {
+    font-size: 2rem;
+  }
+}
+.imageToday header h2 {
+  font-size: 2rem;
+  color: #212121;
+}
+@media only screen and (max-width: 800px) {
+  .imageToday header h2 {
+    font-size: 1.2rem;
+  }
+}
+.imageToday img {
+  border-radius: 1rem;
+}
+.imageToday p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+@media only screen and (max-width: 800px) {
+  .imageToday p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=imagePage.module.css.map */

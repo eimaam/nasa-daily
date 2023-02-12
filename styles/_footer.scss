@@ -1,0 +1,40 @@
+footer{
+    width: 100%;
+    background-color: $grey;
+    padding-top: $l-pad;
+    margin-top: $xl-margin;
+    
+    .footer--items{
+        @include flex-col;
+        width: 50%;
+
+        @include mobile{
+            width: 100%;
+        }
+        
+        .mid{
+            width: 100%;
+            @include flex-row;
+            justify-content: space-between;
+            padding-block: $m-pad;
+
+            @include mobile{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            ul{
+                @include flex-row;
+                margin: 0;
+
+                @include mobile{
+                    flex-direction: column;
+                }
+            }
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+}

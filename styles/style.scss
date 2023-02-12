@@ -1,0 +1,80 @@
+@import "./variables";
+@import "./mixins";
+@import "./variables";
+@import "./utilities";
+@import "./nav";
+@import "./imagePage";
+@import "./footer";
+@import "./signup";
+@import "./login";
+@import "./home";
+@import "./loader";
+
+
+// reset all content
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    transition: all 300ms
+}
+
+html, body{
+    border: none;
+    line-height: 1.3;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    font-family: $spaceGrotesk;
+}
+
+form{
+    width: 35%;
+    @include flex-col;
+    gap: 1rem;
+    padding: $l-pad $s-pad;
+    box-shadow: 0 5px 5px 0 rgba(0 0 0 / 0.2);
+    text-align: center;
+    border-radius: $m-border-radius;
+
+    @include mobile{
+        width: 100%;
+    }
+}
+
+input,   
+textarea{
+    width: 90%;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid $primary;
+    border-radius: $s-border-radius;
+    color: $dark;
+    background-color: $grey;
+    caret-color: $secondary;
+    resize: none;
+    
+    &:hover{
+        border: 1px solid $primary;
+    }
+
+    @include mobile(){
+        width: 100%;
+        font-size: 16px;
+        padding: 0.5rem;
+
+        &::placeholder{
+            font-size: 14px;
+        }
+    }
+}
+
+input[type=submit]{
+    @include mobile(){
+        font-weight: 100;
+        -webkit-border-radius:0;
+        -webkit-appearance: none; 
+    }
+}

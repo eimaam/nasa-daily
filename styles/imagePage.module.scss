@@ -1,0 +1,49 @@
+@import './mixins';
+@import './variables';
+
+
+.imageToday{
+    @include flex-col;
+    padding: $m-pad;
+    width: 60%;
+
+    @include mobile{
+        width: 100%;
+    }
+
+    header{
+        text-align: center;
+
+        h1{
+            font-size: 3rem;
+            letter-spacing: 1rem;
+            color: $primary;
+
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+
+        h2{
+            font-size: 2rem;
+            color: $dark;
+
+            @include mobile{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    img{
+        border-radius: 1rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+        line-height: 1.7;
+
+        @include mobile{
+            font-size: 1rem;
+        }
+    }
+}

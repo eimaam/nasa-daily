@@ -1,0 +1,32 @@
+#signup, .container{
+    @include flex-col();
+    height: 100vh;
+    
+    form{
+        background-color: $default;
+
+        @include mobile{
+            width: 90%;
+        }
+
+        @include tablet{
+            width: 60%;
+        }
+
+        i{
+            width: 90%;
+            margin: auto;
+        }
+
+        div{
+            width: 100%;
+
+            input{
+
+                &:hover{
+                    border: 1px solid $dark;
+                }
+            }
+        }
+    }
+}

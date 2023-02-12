@@ -1,0 +1,52 @@
+nav{
+    @include flex-row;
+    background-color: $dark;
+    padding: $s-pad;
+    justify-content: space-between;
+
+    @include mobile{
+        padding: $xs-pad;
+    }
+
+    #toggler{
+        display: none;
+
+        @include mobile{
+            display: block;
+            z-index: 9000000;
+        }
+    }
+
+    #logOut{
+        @include mobile{
+            display: none;
+        }
+    }
+
+    #logOutMobile{
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+
+    ul{
+        @include flex-row;
+        gap: 3rem;
+
+        li{
+            color: $default;
+        }
+
+        @include mobile{
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            flex-direction: column;
+            background-color: $dark;
+            width: 50%;
+        }
+    }
+}
