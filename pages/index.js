@@ -3,11 +3,13 @@ import Footer  from '@/components/Footer'
 import Image from 'next/image';
 import nasaLogo from "../public/NASA.jpg"
 import styles from "../styles/home.module.scss"
+import Nav from '@/components/nav';
 
 
 export default function Home(){
   return (
     <>
+    <Nav />
     <div id='home' className={styles.home}>
     <header className={styles.header}>
       <div className={styles.details}>

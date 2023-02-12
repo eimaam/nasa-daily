@@ -3,10 +3,6 @@ import Link from 'next/link'
 import styles from '../../styles/login.module.scss'
 
 
-
-
-
-
 export const login = () => {
 
    

@@ -1,21 +1,22 @@
-nav{
+@import './mixins';
+@import './variables';
+
+
+.nav{
     @include flex-row;
-    background-color: $dark;
+    background-color: $primary;
     padding: $s-pad;
     justify-content: space-between;
 
+    h1,h2{
+        color: white;
+    }
+    
     @include mobile{
         padding: $xs-pad;
     }
 
-    #toggler{
-        display: none;
-
-        @include mobile{
-            display: block;
-            z-index: 9000000;
-        }
-    }
+    
 
     #logOut{
         @include mobile{
@@ -48,5 +49,20 @@ nav{
             background-color: $dark;
             width: 50%;
         }
+    }
+
+    button{
+        padding: $xs-pad;
+        border-radius: $s-border-radius;
+        cursor: pointer;
+    }
+}
+
+.toggler{
+    display: none;
+
+    @include mobile{
+        display: block;
+        z-index: 9000000;
     }
 }

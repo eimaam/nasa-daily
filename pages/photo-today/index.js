@@ -22,8 +22,6 @@ export default function index({ result }) {
       </div>
   }
 
-  console.log(session)
-
   return (
     <div>
     <Head>

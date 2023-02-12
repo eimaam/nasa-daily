@@ -1,0 +1,69 @@
+.nav {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #105bd8;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.nav h1, .nav h2 {
+  color: white;
+}
+@media only screen and (max-width: 800px) {
+  .nav {
+    padding: 0.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .nav #logOut {
+    display: none;
+  }
+}
+.nav #logOutMobile {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .nav #logOutMobile {
+    display: block;
+  }
+}
+.nav ul {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  gap: 3rem;
+}
+.nav ul li {
+  color: #fff;
+}
+@media only screen and (max-width: 800px) {
+  .nav ul {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    flex-direction: column;
+    background-color: #212121;
+    width: 50%;
+  }
+}
+.nav button {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.toggler {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .toggler {
+    display: block;
+    z-index: 9000000;
+  }
+}/*# sourceMappingURL=nav.module.css.map */
