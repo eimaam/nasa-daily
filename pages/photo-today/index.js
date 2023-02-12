@@ -17,7 +17,7 @@ export default function PhotoToday({ result }) {
 
   if(!session){
     return <div> 
-      <p>You're not logged in </p>
+      <p>{`You're not logged in`}</p>
         <button onClick={() => signIn()}>Sign in</button>
       </div>
   }
@@ -25,7 +25,7 @@ export default function PhotoToday({ result }) {
   return (
     <div>
     <Head>
-      <title>Today's Image</title>
+      <title>{`Today's Image`}</title>
     </Head>
       <ImageToday 
         date={result.date}

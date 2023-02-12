@@ -1,6 +1,7 @@
-// import { Footer } from '../Footer';
 import { Header } from './Header';
 import styles from "../../styles/imagePage.module.scss"
+import Footer from '../Footer';
+import Image from 'next/image';
 
 
 
@@ -13,7 +14,7 @@ const ImageToday = ({ date, title, explanation, url }) => {
     <div className={styles.imageToday}>
         <Header date={date} />
         <div>
-            <img src={url} alt={title} />
+            <Image src={url} alt={title} />
         </div>
             <h2>{title}</h2>
             <h4>Image Credit: <i>NASA</i></h4>
@@ -26,7 +27,7 @@ const ImageToday = ({ date, title, explanation, url }) => {
 
         <hr />
     </div>
-    {/* <Footer /> */}
+    <Footer />
     </>
   )
 }
