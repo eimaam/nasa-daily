@@ -3,7 +3,7 @@ import Footer  from '@/components/Footer'
 import Image from 'next/image';
 import nasaLogo from "../public/NASA.jpg"
 import styles from "../styles/home.module.scss"
-import Nav from '@/components/nav';
+import Nav from '@/components/Nav';
 
 
 export default function Home(){

@@ -2,7 +2,7 @@ const { useSession, signOut, signIn } = require("next-auth/react")
 const { default: Link } = require("next/link")
 import style from '../styles/nav.module.scss'
 
-const Nav = () => {
+export default function Nav(){
     const { data: session } = useSession()
 
     // function to hide or show nav bar on mobile
@@ -54,5 +54,3 @@ const Nav = () => {
         </nav>
       )
 }   
-
-export default Nav;
