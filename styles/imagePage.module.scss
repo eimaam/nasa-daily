@@ -11,6 +11,13 @@
         width: 100%;
     }
 
+    .image{
+        @include mobile{
+            width: 100%;
+            height: max-content;
+        }
+    }
+
     header{
         text-align: center;
 

@@ -12,6 +12,11 @@
   color: white;
 }
 @media only screen and (max-width: 800px) {
+  .nav h2 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
   .nav {
     padding: 0.5rem;
   }

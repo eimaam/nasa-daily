@@ -14,7 +14,7 @@ const ImageToday = ({ date, title, explanation, url }) => {
     <div className={styles.imageToday}>
         <Header date={date} />
         <div>
-            <Image src={url} alt={title} />
+            <Image src={url} alt={title} width={800} height={450} className={styles.image}/>
         </div>
             <h2>{title}</h2>
             <h4>Image Credit: <i>NASA</i></h4>

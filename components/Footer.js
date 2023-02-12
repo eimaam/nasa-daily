@@ -16,10 +16,6 @@ const Footer = () => {
               <li>Officials</li>
               <li>API Documentation</li>
           </ul>
-          <div>
-            <h3>Contact:</h3>
-            <p>support@nasadaily.org</p>
-          </div>
         </div>
         <div style={{textAlign: "center"}}>
             <p>All rights reserved.</p>

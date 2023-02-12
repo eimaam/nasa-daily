@@ -19,12 +19,12 @@ export default function Nav(){
     return (
         <nav className={style.nav}>
           <div>
-            {session ? <h2>{session.user.name}</h2> : <h2>NASA Daily</h2>}
+            {session ? <h2 className={style.h2}>{session.user.name}</h2> : <h2>NASA Daily</h2>}
           </div>
           <ul id='navItems' className={style.ul}>
             <li><Link href="/">Home</Link></li>
             <li><a href="https://api.nasa.gov/index.html#apply-for-an-api-key">API Doc</a></li>
-            <li><Link href="/photooftheday">TODAY</Link></li>
+            <li><Link href="/photo-today">TODAY</Link></li>
             <li><Link href="">About</Link></li>
             <li><a href="https://www.github.com/eimaam/nasa-daily">Source Code</a></li>
             {session ? 
@@ -37,11 +37,7 @@ export default function Nav(){
             </li>
             }
           </ul>
-          {session &&
-          <div id='logOut' onClick={() => signOut()}>
-            <button>Sign Out</button>
-          </div>
-          }
+          
           <div className={style.toggler} onClick={toggleNav}>
             <h1 className={style.h1}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

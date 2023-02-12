@@ -23,6 +23,7 @@
             @include flex-row;
             justify-content: space-between;
             padding-block: $m-pad;
+            margin: auto;
 
             @include mobile{
                 flex-direction: column;
@@ -31,7 +32,7 @@
 
             ul{
                 @include flex-row;
-                margin: 0;
+                margin: auto;
 
                 @include mobile{
                     flex-direction: column;

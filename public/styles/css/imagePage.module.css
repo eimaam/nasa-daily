@@ -13,6 +13,13 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 800px) {
+  .imageToday .image {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
 .imageToday header {
   text-align: center;
 }

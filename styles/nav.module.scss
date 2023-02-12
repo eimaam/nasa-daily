@@ -11,6 +11,12 @@
     h1,h2{
         color: white;
     }
+
+    h2{
+        @include mobile{
+            font-size: 1.2rem;
+        }
+    }
     
     @include mobile{
         padding: $xs-pad;
