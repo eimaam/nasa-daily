@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function index({ result }) {
+export default function PhotoToday({ result }) {
   const { data: session } = useSession()
 
   if(!session){

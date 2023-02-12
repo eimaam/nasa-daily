@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from '../../styles/login.module.scss'
 
 
-export const login = () => {
+export default function Login(){
 
    
 
@@ -58,7 +58,7 @@ export const login = () => {
                 <input type='submit' value="Log in"/>
             </div>
             <div>
-                <p>Don't have an account yet? 
+                <p>{`Don't have an account yet?`} 
                 &nbsp; 
                     <button className='btn--small'>
                         <Link href="/signup"> SIGN UP </Link>
@@ -69,5 +69,3 @@ export const login = () => {
     </div>
   )
 }
-
-export default login;
