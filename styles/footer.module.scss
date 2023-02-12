@@ -1,12 +1,18 @@
-footer{
+@import './mixins';
+@import './variables';
+@import './utilities';
+
+.footer{
     width: 100%;
     background-color: $grey;
     padding-top: $l-pad;
     margin-top: $xl-margin;
     
-    .footer--items{
+    
+    .footerItems{
         @include flex-col;
         width: 50%;
+        
 
         @include mobile{
             width: 100%;

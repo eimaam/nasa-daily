@@ -27,7 +27,7 @@ export default function index({ result }) {
   return (
     <div>
     <Head>
-      Today's Image
+      <title>Today's Image</title>
     </Head>
       <ImageToday 
         date={result.date}

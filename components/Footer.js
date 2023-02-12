@@ -1,13 +1,15 @@
+import Link from 'next/link';
 import React from 'react'
+import style from "../styles/footer.module.scss"
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <footer>
-      <div className='footer--items'>
+    <footer className={style.footer}>
+      <div className={style.footerItems}>
         <div>
             <h2>NASA DAILY</h2>
         </div>
-        <div className='mid'>
+        <div className={style.mid}>
           <ul>
               <li>Privacy Doc.</li>
               <li>NASA</li>
@@ -19,11 +21,13 @@ export const Footer = () => {
             <p>support@nasadaily.org</p>
           </div>
         </div>
-        <div>
+        <div style={{textAlign: "center"}}>
             <p>All rights reserved.</p>
-            <p>&copy; MYM 2023.</p>
+            <a href="https://eimaam.dev">eimaam.dev</a>
         </div>
       </div>
     </footer>
   )
 }
+
+export default Footer;

@@ -2,13 +2,9 @@
 
 // Header sizes
 // font sizes
-a{
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-}
 
-h1{
+
+.h1{
     font-size: 2rem;
     color: $secondary;
 
@@ -21,7 +17,7 @@ h1{
     }
 }
 
-h2{
+.h2{
     font-size: 1.25rem;
     color: $primary;
 
@@ -34,7 +30,7 @@ h2{
     }
 }
 
-h3{
+.h3{
     font-size: 1.15rem;
 
     @include mobile{
@@ -46,7 +42,7 @@ h3{
     }
 }
 
-h4{
+.h4{
     font-size: 1.01rem;
     font-weight: 500;
 
@@ -56,7 +52,7 @@ h4{
     }
 }
 
-p{
+.p{
     font-size: 1rem;
     font-weight: lighter;
 
@@ -66,7 +62,7 @@ p{
 }
 
 // Button & submit input
-button, input[type=submit]{
+.button, .input[type=submit]{
     padding: $xs-pad $m-pad; 
     font-size: 1rem;
     color: $default;
@@ -88,7 +84,7 @@ button, input[type=submit]{
 }
 
 .btn--secondary{
-    @extend button;
+    @extend .button;
     background-color: $secondary;
 }
 
@@ -103,25 +99,15 @@ button, input[type=submit]{
     color: $dark;
 }
 
-img{
+.img{
     max-width: 100%;
     display: block;
     object-fit: cover; 
 }
 
-ul{
-    list-style-type: none;
 
-    li{
-        font-size: 1rem;
 
-        @include mobile{
-            font-size: 0.8rem;
-        }
-    }
-}
-
-hr{
+.hr{
     margin: 2rem auto;
     color: $primary;
     border: 1px solid $primary;

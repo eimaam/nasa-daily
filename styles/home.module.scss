@@ -1,10 +1,14 @@
-#home{
+@import './mixins';
+@import './variables';
+@import './utilities';
+
+.home{
     @include flex-col;
     height: 100vh;
     margin: auto;
 }
 
-header{
+.header{
     @include flex-col;
     padding: $m-pad;
     width: 70%;

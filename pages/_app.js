@@ -1,5 +1,6 @@
 import { SessionProvider }  from "next-auth/react"
 import { Alef } from "@next/font/google"
+import '../styles/globals.css'
 
 const alef = Alef({ 
   weight: ['400', '700'], 
